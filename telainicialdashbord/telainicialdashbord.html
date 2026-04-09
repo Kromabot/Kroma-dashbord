@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashbord do Kroma">
+    <meta name="kaywords" content="Dashbord, Kroma, Bot, Kroma bot, Discord bot">
+    <meta name="author" content="David Santos">
+    <title>Kroma dashbord</title>
+    <link rel="stylesheet" href="telainicialdashbord.css">
+</head>
+
+<body>
+    <header>
+        <!--MENU-->
+        <div class="container-vertical-scroll">
+            <h3 class="titulo-scroll">Lista de Funcionalidades</h3>
+            <div class="conteudo-scroll">
+                <a href="funcoesdashbord/servidores.html" class="item-lista">Meus servidores</a>
+                <a href="funcoesdashbord/infoservidores.html" class="item-lista">Informação do servidor</a>
+
+                <div class="item-lista-categoria">Receção</div>
+                <a href="funcoesdashbord/rececao_entrada/entrada.html" class="item-lista">Mensagens de entrada</a>
+                <a href="funcoesdashbord/rececao_saida/saida.html" class="item-lista">Mensagens de saída</a>
+                <a href="funcoesdashbord/rececao_verificacao/verificacao.html" class="item-lista">Verificação</a>
+
+                <div class="item-lista-categoria">Comandos suporte</div>
+                <a href="funcoesdashbord/comandos_suporte_ajuda_bot/ajuda_bot.html" class="item-lista">Ajuda bot</a>
+                <a href="funcoesdashbord/comandos_suporte_ajuda_servidor/ajuda_servidor.html" class="item-lista">Ajuda
+                    servidor</a>
+
+                <div class="item-lista-categoria">Comandos administrativos</div>
+                <a href="funcoesdashbord/comandos_administrativos_comandos_administrativos/comandos_administrativos.html"
+                    class="item-lista">Comandos administrativos</a>
+
+                <div class="item-lista-categoria">Tags automáticas</div>
+                <a href="funcoesdashbord/tags_automaticas_tags_reacao/tags_reacao.html" class="item-lista">Tags por reação</a>
+                <a href="funcoesdashbord/tags_automaticas_tags_mencionamento/tags_mencionamento.html" class="item-lista">Tags por mencionamento</a>
+                <a href="funcoesdashbord/tags_automaticas_tags_entrar/tags_entrar.html" class="item-lista">Tag ao entrar</a>
+            </div>
+        </div>
+        <!--TITULO RECEÇÃO-->
+        <h1 class="titulo-rececao">Receção</h1>
+        <!--TITULO COMANDOS SUPORTE-->
+        <h1 class="titulo-comandos-suporte">Comandos de Suporte</h1>
+        <!--TITULO COMANDOS ADMINISTRATIVOS-->
+        <h1 class="titulo-comandos-administrativos">Comandos Administrativos</h1>
+        <!--TITULO TAGS POR AUTOMATICAS-->
+        <h1 class="titulo-tags-automaticas">Tags automáticas</h1>
+
+    </header>
+
+    <article>
+        <div class="retangulo-info-telainicialdashbord"> </div>
+        <div class="fundotelainicial-telainicialdashbord"> </div>
+        <a href="..//index.html" class="logotelainicial-telainicialdashbord"></a>
+        <!--ATUALIZAÇÕES-->
+        <button id="btn-atualizacoes" class="botao-custom-atualizacoes">
+            <span>Atualizações</span>
+            <img src="imagenstelainicialdashbord/atualizacoestelainicialdashbord.jpg" alt="icon">
+        </button>
+
+        <div id="painel-atualizacoes" class="retangulo-atualizacoes">
+            <div class="embed-item-atualizacoes">
+                <div class="embed-barra-lateral-atualizacoes" style="background: #ff00b3;"></div>
+                <div class="embed-conteudo-atualizacoes">
+                    <strong>Versão 1.1</strong>
+                    <p>Adicionado sistema com IA (Versão beta).</p>
+                </div>
+            </div>
+
+            <div class="embed-item-atualizacoes">
+                <div class="embed-barra-lateral-atualizacoes" style="background: #00ff15;"></div>
+                <div class="embed-conteudo-atualizacoes">
+                    <strong>Versão 1.0</strong>
+                    <p>Adicionado sistema Tickets.</p>
+                    <p>Adicionado mais 5 estilos de embled de entrada no servidor.</p>
+                    <p>Adicionado mais 5 estilos de embled de saida no servidor.</p>
+                </div>
+            </div>
+
+            <div class="embed-item-atualizacoes">
+                <div class="embed-barra-lateral-atualizacoes" style="background: #5865F2;"></div>
+                <div class="embed-conteudo-atualizacoes">
+                    <strong>Versão Beta 1.1</strong>
+                    <p>Otimização do sistema de convites.</p>
+                    <p>Adicionado giveway exclusivo a tags.</p>
+                    <p>Adicinado rank da staff.</p>
+                </div>
+
+            </div>
+            <div class="embed-item-atualizacoes">
+                <div class="embed-barra-lateral-atualizacoes" style="background: #ff0000;"></div>
+                <div class="embed-conteudo-atualizacoes">
+                    <strong>Versão Beta 1.0</strong>
+                    <p>Adicionado sistema de giveway.</p>
+                    <p>Adicionado sistema de convites.</p>
+                    <p>Adicionado sistema de feedback à staff.</p>
+                </div>
+
+            </div>
+
+        </div>
+        <!--NOTIFICAÇÕES-->
+        <button id="btn-notificacoes" class="botao-custom-notificacoes">
+            <span>Notificações</span>
+            <img src="imagenstelainicialdashbord/notificacaotelainicialdashbord.jpg" alt="icon">
+        </button>
+
+        <div id="painel-notificacoes" class="retangulo-notificacoes">
+            <div class="embed-item-notificacoes">
+                <div class="embed-barra-lateral-notificacoes" style="background: #eeff00;"></div>
+                <div class="embed-conteudo-notificacoes">
+                    <strong>SORTEIO</strong>
+                    <p>Sorteio de um VIP mensal no nosso discord.</p>
+                </div>
+            </div>
+        </div>
+        <!--TODAS AS FUNCIONALIDADES DO BOT-->
+        <!--MENSAGEM DE ENTRADA-->
+        <div class="card-entrada">
+            <div class="card-header-entrada">
+                <div class="icon-box-entrada">
+                    <img src="caminho-da-tua-imagem/wave-icon.png" alt="Recepção">
+                </div>
+                <span class="badge-gratuito-entrada">Gratuito</span>
+            </div>
+
+            <h2 class="card-title-entrada">Mensagem de entrada</h2>
+
+            <p class="card-description-entrada">
+                Envie mensagens automaticamente e atribua cargos aos seus novos membros quando entram no servidor e ...
+            </p>
+
+            <div class="status-button-entrada">
+                <span class="check-icon-entrada">✓</span> Ativo
+            </div>
+        </div>
+        <a href="funcoesdashbord/rececao_entrada/entrada.html" class="botao-funcao-entrada">
+            <button type="button">Usar</button>
+        </a>
+        <!--MENSAGEM DE SAIDA-->
+        <div class="card-saida">
+            <div class="card-header-saida">
+                <div class="icon-box-saida">
+                    <img src="caminho-da-tua-imagem/wave-icon.png" alt="Recepção">
+                </div>
+                <span class="badge-gratuito-saida">Gratuito</span>
+            </div>
+
+            <h2 class="card-title-saida">Mensagem de saída</h2>
+
+            <p class="card-description-saida">
+                Envie mensagens automaticamente e atribua cargos aos seus novos membros quando entram no servidor e ...
+            </p>
+
+            <div class="status-button-saida">
+                <span class="check-icon-saida">✓</span> Ativo
+            </div>
+        </div>
+        <a href="funcoesdashbord/rececao_saida/saida.html" class="botao-funcao-saida">
+            <button type="button">Usar</button>
+        </a>
+        <!--VERIFICAÇÃO-->
+        <div class="card-verificacao">
+            <div class="card-header-verificacao">
+                <div class="icon-box-verificacao">
+                    <img src="caminho-da-tua-imagem/wave-icon.png" alt="Recepção">
+                </div>
+                <span class="badge-gratuito-verificacao">Gratuito</span>
+            </div>
+
+            <h2 class="card-title-verificacao">Verificação</h2>
+
+            <p class="card-description-verificacao">
+                Envie mensagens automaticamente e atribua cargos aos seus novos membros quando entram no servidor e ...
+            </p>
+
+            <div class="status-button-verificacao">
+                <span class="check-icon-verificacao">✓</span> Ativo
+            </div>
+        </div>
+        <a href="funcoesdashbord/rececao_verificacao/verificacao.html" class="botao-funcao-verificacao">
+            <button type="button">Usar</button>
+        </a>
+        <!--AJUDA BOT-->
+        <div class="card-ajuda-bot">
+            <div class="card-header-ajuda-bot">
+                <div class="icon-box-ajuda-bot">
+                    <img src="caminho-da-tua-imagem/wave-icon.png" alt="Recepção">
+                </div>
+                <span class="badge-gratuito-ajuda-bot">Gratuito</span>
+            </div>
+
+            <h2 class="card-title-ajuda-bot">Ajuda Bot</h2>
+
+            <p class="card-description-ajuda-bot">
+                Envie mensagens automaticamente e atribua cargos aos seus novos membros quando entram no servidor e ...
+            </p>
+
+            <div class="status-button-ajuda-bot">
+                <span class="check-icon-ajuda-bot">✓</span> Ativo
+            </div>
+        </div>
+        <a href="funcoesdashbord/comandos_suporte_ajuda_bot/ajuda_bot.html" class="botao-funcao-ajuda-bot">
+            <button type="button">Usar</button>
+        </a>
+        <!--AJUDA SERVIDOR-->
+        <div class="card-ajuda-servidor">
+            <div class="card-header-ajuda-servidor">
+                <div class="icon-box-ajuda-servidor">
+                    <img src="caminho-da-tua-imagem/wave-icon.png" alt="Recepção">
+                </div>
+                <span class="badge-gratuito-ajuda-servidor">Gratuito</span>
+            </div>
+
+            <h2 class="card-title-ajuda-servidor">Ajuda Servidor</h2>
+
+            <p class="card-description-ajuda-servidor">
+                Envie mensagens automaticamente e atribua cargos aos seus novos membros quando entram no servidor e ...
+            </p>
+
+            <div class="status-button-ajuda-servidor">
+                <span class="check-icon-ajuda-servidor">✓</span> Ativo
+            </div>
+        </div>
+        <a href="funcoesdashbord/comandos_suporte_ajuda_servidor/ajuda_servidor.html" class="botao-funcao-ajuda-servidor">
+            <button type="button">Usar</button>
+        </a>
+        <!--COMANDOS ADMINISTRATIVOS-->
+        <div class="card-comandos-administrativos">
+            <div class="card-header-comandos-administrativos">
+                <div class="icon-box-comandos-administrativos">
+                    <img src="caminho-da-tua-imagem/wave-icon.png" alt="Recepção">
+                </div>
+                <span class="badge-gratuito-comandos-administrativos">Gratuito</span>
+            </div>
+
+            <h2 class="card-title-comandos-administrativos">Comandos Administrativos</h2>
+
+            <p class="card-description-comandos-administrativos">
+                Envie mensagens automaticamente e atribua cargos aos seus novos membros quando entram no servidor e ...
+            </p>
+
+            <div class="status-button-comandos-administrativos">
+                <span class="check-icon-comandos-administrativos">✓</span> Ativo
+            </div>
+        </div>
+        <a href="funcoesdashbord/comandos_administrativos_comandos_administrativos/comandos_administrativos.html" class="botao-funcao-comandos-administrativos">
+            <button type="button">Usar</button>
+        </a>
+        <!--TAGS POR REAÇÃO-->
+        <div class="card-tags-reacao">
+            <div class="card-header-tags-reacao">
+                <div class="icon-box-tags-reacao">
+                    <img src="caminho-da-tua-imagem/wave-icon.png" alt="Recepção">
+                </div>
+                <span class="badge-gratuito-tags-reacao">Gratuito</span>
+            </div>
+
+            <h2 class="card-title-tags-reacao">Tags por reação</h2>
+
+            <p class="card-description-tags-reacao">
+                Envie mensagens automaticamente e atribua cargos aos seus novos membros quando entram no servidor e ...
+            </p>
+
+            <div class="status-button-tags-reacao">
+                <span class="check-icon-tags-reacao">✓</span> Ativo
+            </div>
+        </div>
+        <a href="funcoesdashbord/tags_automaticas_tags_reacao/tags_reacao.html" class="botao-funcao-tags-reacao">
+            <button type="button">Usar</button>
+        </a>
+        <!--TAGS POR MENCIONAMENTO-->
+        <div class="card-tags-mencionamento">
+            <div class="card-header-tags-mencionamento">
+                <div class="icon-box-tags-mencionamento">
+                    <img src="caminho-da-tua-imagem/wave-icon.png" alt="Recepção">
+                </div>
+                <span class="badge-gratuito-tags-mencionamento">Gratuito</span>
+            </div>
+
+            <h2 class="card-title-tags-mencionamento">Tags por mencionamento</h2>
+
+            <p class="card-description-tags-mencionamento">
+                Envie mensagens automaticamente e atribua cargos aos seus novos membros quando entram no servidor e ...
+            </p>
+
+            <div class="status-button-tags-mencionamento">
+                <span class="check-icon-tags-mencionamento">✓</span> Ativo
+            </div>
+        </div>
+        <a href="funcoesdashbord/tags_automaticas_tags_mencionamento/tags_mencionamento.html" class="botao-funcao-tags-mencionamento">
+            <button type="button">Usar</button>
+        </a>
+        <!--TAGS AO ENTRAR-->
+        <div class="card-tags-entrar">
+            <div class="card-header-tags-entrar">
+                <div class="icon-box-tags-entrar">
+                    <img src="caminho-da-tua-imagem/wave-icon.png" alt="Recepção">
+                </div>
+                <span class="badge-gratuito-tags-entrar">Gratuito</span>
+            </div>
+
+            <h2 class="card-title-tags-entrar">Tags ao entrar</h2>
+
+            <p class="card-description-tags-entrar">
+                Envie mensagens automaticamente e atribua cargos aos seus novos membros quando entram no servidor e ...
+            </p>
+
+            <div class="status-button-tags-entrar">
+                <span class="check-icon-tags-entrar">✓</span> Ativo
+            </div>
+        </div>
+        <a href="funcoesdashbord/tags_automaticas_tags_entrar/tags_entrar.html" class="botao-funcao-tags-entrar">
+            <button type="button">Usar</button>
+        </a>
+    </article>
+
+    <footer>
+    </footer>
+    <script src="telainicialdashbord.js"></script>
+</body>
+
+</html>
