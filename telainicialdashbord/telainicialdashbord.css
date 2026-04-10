@@ -104,7 +104,7 @@
 
 /* Estilo dos itens lá dentro */
 .item-lista {
-    display: block;
+    display: flex;
     /* Faz o link ocupar a largura toda do retângulo */
     background: #313338;
     color: #dbdee1;
@@ -118,6 +118,22 @@
     transition: all 0.2s ease;
     /* Efeito suave ao passar o rato */
     border: 1px solid transparent;
+    justify-content: space-between;
+}
+
+.badge-futura-atualizacao {
+    background-color: #252525;
+    /* Um tom mais escuro para destacar */
+    color: #00aff4;
+    /* Cor de destaque (podes usar a que preferires) */
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #404249;
+    white-space: nowrap;
+    /* Impede que o texto quebre linha */
 }
 
 /* Efeito ao passar o rato (Hover) */
@@ -310,6 +326,161 @@
     display: block !important;
 }
 
+.link-suporte {
+    text-decoration: none;
+    /* Remove o sublinhado do link */
+}
+
+.btn-suporte-discord {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #313338;
+    /* Cor oficial do Discord */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    top: 2.6%;
+    left: 44.3%;
+    z-index: 4;
+    width: 190px;
+    height: 49.4px;
+    flex-direction: row-reverse;
+}
+
+.btn-suporte-discord img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Efeito ao passar o rato */
+.btn-suporte-discord:hover {
+    background-color: #404249;
+    transform: translateY(-2px);
+}
+
+/* Efeito ao clicar */
+.btn-suporte-discord:active {
+    transform: translateY(0);
+}
+
+/* Container principal */
+.idioma-container {
+    position: fixed;
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    top: 2.8%;
+    left: 36%;
+    z-index: 3;
+}
+
+/* Botão que fica visível */
+.btn-idioma-atual {
+    background: #313338;
+    border: none;
+    color: #dbdee1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    width: 90px;
+    height: 49px;
+}
+
+.btn-idioma-atual img {
+    width: 20px;
+    border-radius: 2px;
+}
+
+/* Seta pequena ao lado do texto */
+.seta-baixo {
+    border: solid #949ba4;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px;
+    transform: rotate(45deg);
+    margin-left: 2px;
+}
+
+/* Painel que aparece (Dropdown) */
+.painel-idiomas {
+    display: none;
+    /* Escondido por padrão */
+    position: absolute;
+    top: 100%;
+    left: -50%;
+    background-color: #111214;
+    /* Cor escura do painel da imagem */
+    min-width: 160px;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Mostrar o painel quando passar o rato */
+.idioma-container:hover .painel-idiomas {
+    display: block;
+}
+
+.idioma-container:active .painel-idiomas {
+    display: none;
+}
+
+/* Mas mantém o hover para abrir */
+.idioma-container:hover .painel-idiomas {
+    display: block;
+}
+
+/* Itens da lista de idiomas */
+.item-idioma {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #b5bac1;
+    padding: 10px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.item-idioma img {
+    width: 20px;
+    height: auto;
+}
+
+.item-idioma:hover {
+    background-color: #35373c;
+    /* Cor de hover estilo Discord */
+    color: #ffffff;
+}
+
+/* Estilo para o idioma que está selecionado */
+.item-idioma.active {
+    background-color: #3f4147;
+    color: #ffffff;
+}
+
+#img-atual {
+    width: 20px;
+    height: auto;
+    border-radius: 2px;
+    object-fit: cover;
+}
+
 body {
     background-color: #1e1f22;
     /* Fundo escuro estilo Discord */
@@ -337,7 +508,8 @@ body {
 
 .botao-funcao-entrada button {
     position: absolute;
-    background-color: #252525; /* Azul clássico do Discord */
+    background-color: #252525;
+    /* Azul clássico do Discord */
     color: #4e92f3;
     padding: 10px 20px;
     border: none;
@@ -354,7 +526,8 @@ body {
 }
 
 .botao-funcao-entrada button:hover {
-    background-color: #404249; /* Azul um pouco mais escuro ao passar o rato */
+    background-color: #404249;
+    /* Azul um pouco mais escuro ao passar o rato */
 }
 
 .card-entrada {
@@ -452,7 +625,8 @@ body {
 
 .botao-funcao-saida button {
     position: absolute;
-    background-color: #252525; /* Azul clássico do Discord */
+    background-color: #252525;
+    /* Azul clássico do Discord */
     color: #4e92f3;
     padding: 10px 20px;
     border: none;
@@ -469,7 +643,8 @@ body {
 }
 
 .botao-funcao-saida button:hover {
-    background-color: #404249; /* Azul um pouco mais escuro ao passar o rato */
+    background-color: #404249;
+    /* Azul um pouco mais escuro ao passar o rato */
 }
 
 .card-saida {
@@ -567,7 +742,8 @@ body {
 
 .botao-funcao-verificacao button {
     position: absolute;
-    background-color: #252525; /* Azul clássico do Discord */
+    background-color: #252525;
+    /* Azul clássico do Discord */
     color: #4e92f3;
     padding: 10px 20px;
     border: none;
@@ -584,7 +760,8 @@ body {
 }
 
 .botao-funcao-verificacao button:hover {
-    background-color: #404249; /* Azul um pouco mais escuro ao passar o rato */
+    background-color: #404249;
+    /* Azul um pouco mais escuro ao passar o rato */
 }
 
 .card-verificacao {
@@ -699,7 +876,8 @@ body {
 
 .botao-funcao-ajuda-bot button {
     position: absolute;
-    background-color: #252525; /* Azul clássico do Discord */
+    background-color: #252525;
+    /* Azul clássico do Discord */
     color: #4e92f3;
     padding: 10px 20px;
     border: none;
@@ -716,7 +894,8 @@ body {
 }
 
 .botao-funcao-ajuda-bot button:hover {
-    background-color: #404249; /* Azul um pouco mais escuro ao passar o rato */
+    background-color: #404249;
+    /* Azul um pouco mais escuro ao passar o rato */
 }
 
 .card-ajuda-bot {
@@ -814,7 +993,8 @@ body {
 
 .botao-funcao-ajuda-servidor button {
     position: absolute;
-    background-color: #252525; /* Azul clássico do Discord */
+    background-color: #252525;
+    /* Azul clássico do Discord */
     color: #4e92f3;
     padding: 10px 20px;
     border: none;
@@ -831,7 +1011,8 @@ body {
 }
 
 .botao-funcao-ajuda-servidor button:hover {
-    background-color: #404249; /* Azul um pouco mais escuro ao passar o rato */
+    background-color: #404249;
+    /* Azul um pouco mais escuro ao passar o rato */
 }
 
 .card-ajuda-servidor {
@@ -946,7 +1127,8 @@ body {
 
 .botao-funcao-comandos-administrativos button {
     position: absolute;
-    background-color: #252525; /* Azul clássico do Discord */
+    background-color: #252525;
+    /* Azul clássico do Discord */
     color: #4e92f3;
     padding: 10px 20px;
     border: none;
@@ -963,7 +1145,8 @@ body {
 }
 
 .botao-funcao-comandos-administrativos button:hover {
-    background-color: #404249; /* Azul um pouco mais escuro ao passar o rato */
+    background-color: #404249;
+    /* Azul um pouco mais escuro ao passar o rato */
 }
 
 .card-comandos-administrativos {
@@ -1027,7 +1210,7 @@ body {
 }
 
 .status-button-comandos-administrativos {
-    display: relative;
+    display: absolute;
     top: 20%;
     left: 60%;
     background-color: #252525;
@@ -1059,7 +1242,241 @@ body {
     left: 3%;
 }
 
-.titulo-tags-automaticas {
+.botao-funcao-sistema-comunicados button {
+    position: absolute;
+    background-color: #252525;
+    /* Azul clássico do Discord */
+    color: #4e92f3;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    z-index: 4;
+    top: 173%;
+    left: 55.3%;
+    width: 95px;
+    height: 43px;
+}
+
+.botao-funcao-sistema-comunicados button:hover {
+    background-color: #404249;
+    /* Azul um pouco mais escuro ao passar o rato */
+}
+
+.card-sistema-comunicados {
+    position: absolute;
+    background-color: #2b2d31;
+    width: 220px;
+    height: 272px;
+    padding: 24px;
+    top: 136%;
+    left: 45%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #dbdee1;
+    z-index: 2;
+}
+
+.card-header-sistema-comunicados {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.icon-box-sistema-comunicados {
+    background-color: #1100fc;
+    /* Cor de fundo do ícone (ajuste conforme a imagem) */
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-box-sistema-comunicados img {
+    width: 30px;
+    height: 30px;
+}
+
+.badge-gratuito-sistema-comunicados {
+    background-color: #10334b;
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid rgba(241, 196, 15, 0.2);
+}
+
+.card-title-sistema-comunicados {
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0 0 12px 0;
+}
+
+.card-description-sistema-comunicados {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #b5bac1;
+    margin-bottom: 24px;
+}
+
+.status-button-sistema-comunicados {
+    position: absolute;
+    top: 82%;
+    left: 9%;
+    background-color: #252525;
+    color: #4e92f3;
+    /* Azul do texto "Ativo" */
+    padding: 13px 6px;
+    padding-left: 40px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s;
+    z-index: 1;
+    width: 50px;
+}
+
+.check-icon-sistema-comunicados {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #4e92f3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 30px;
+    font-size: 10px;
+    top: 36%;
+    left: -14%;
+}
+
+.botao-funcao-sistema-atualizacoes button {
+    position: absolute;
+    background-color: #252525;
+    /* Azul clássico do Discord */
+    color: #4e92f3;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    z-index: 4;
+    top: 173%;
+    left: 75.3%;
+    width: 95px;
+    height: 43px;
+}
+
+.botao-funcao-sistema-atualizacoes button:hover {
+    background-color: #404249;
+    /* Azul um pouco mais escuro ao passar o rato */
+}
+
+.card-sistema-atualizacoes {
+    position: absolute;
+    background-color: #2b2d31;
+    width: 220px;
+    height: 272px;
+    padding: 24px;
+    top: 136%;
+    left: 65%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #dbdee1;
+    z-index: 2;
+}
+
+.card-header-sistema-atualizacoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.icon-box-sistema-atualizacoes {
+    background-color: #1100fc;
+    /* Cor de fundo do ícone (ajuste conforme a imagem) */
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-box-sistema-atualizacoes img {
+    width: 30px;
+    height: 30px;
+}
+
+.badge-gratuito-sistema-atualizacoes {
+    background-color: #10334b;
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid rgba(241, 196, 15, 0.2);
+}
+
+.card-title-sistema-atualizacoes {
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0 0 12px 0;
+}
+
+.card-description-sistema-atualizacoes {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #b5bac1;
+    margin-bottom: 24px;
+}
+
+.status-button-sistema-atualizacoes {
+    position: absolute;
+    top: 82%;
+    left: 9%;
+    background-color: #252525;
+    color: #4e92f3;
+    /* Azul do texto "Ativo" */
+    padding: 13px 6px;
+    padding-left: 40px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s;
+    z-index: 1;
+    width: 50px;
+}
+
+.check-icon-sistema-atualizacoes {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #4e92f3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 30px;
+    font-size: 10px;
+    top: 36%;
+    left: -14%;
+}
+
+.titulo-staff {
     position: absolute;
     color: #949ba4;
     /* Cor mais discreta para títulos de categoria */
@@ -1076,9 +1493,10 @@ body {
     z-index: 2;
 }
 
-.botao-funcao-tags-reacao button {
+.botao-funcao-sistema-feedback button {
     position: absolute;
-    background-color: #252525; /* Azul clássico do Discord */
+    background-color: #252525;
+    /* Azul clássico do Discord */
     color: #4e92f3;
     padding: 10px 20px;
     border: none;
@@ -1089,13 +1507,265 @@ body {
     transition: background-color 0.2s;
     z-index: 2;
     top: 227.6%;
+    left: 45.2%;
+    width: 110px;
+    height: 43px;
+}
+
+.botao-funcao-sistema-rank button:hover {
+    background-color: #404249;
+    /* Azul um pouco mais escuro ao passar o rato */
+}
+
+.card-sistema-feedback {
+    position: absolute;
+    background-color: #2b2d31;
+    width: 220px;
+    height: 255px;
+    padding: 24px;
+    top: 194%;
+    left: 25%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #dbdee1;
+    z-index: 1;
+}
+
+.card-header-sistema-feedback {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.icon-box-sistema-feedback {
+    background-color: #1100fc;
+    /* Cor de fundo do ícone (ajuste conforme a imagem) */
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-box-sistema-feedback img {
+    width: 30px;
+    height: 30px;
+}
+
+.badge-gratuito-sistema-feedback {
+    background-color: #10334b;
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid rgba(241, 196, 15, 0.2);
+}
+
+.card-title-sistema-feedback {
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0 0 12px 0;
+}
+
+.card-description-sistema-feedback {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #b5bac1;
+    margin-bottom: 24px;
+}
+
+.status-button-sistema-feedback {
+    display: relative;
+    top: 20%;
+    left: 60%;
+    background-color: #252525;
+    color: #4e92f3;
+    /* Azul do texto "Ativo" */
+    padding: 13px 6px;
+    padding-left: 40px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s;
+    z-index: 1;
+    width: 50px;
+}
+
+.check-icon-sistema-feedback {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #4e92f3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 30px;
+    font-size: 10px;
+    top: 83.5%;
+    left: 3%;
+}
+
+.botao-funcao-sistema-rank button {
+    position: absolute;
+    background-color: #252525;
+    /* Azul clássico do Discord */
+    color: #4e92f3;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    z-index: 2;
+    top: 227.6%;
+    left: 55.2%;
+    width: 95px;
+    height: 43px;
+}
+
+.botao-funcao-sistema-rank button:hover {
+    background-color: #404249;
+    /* Azul um pouco mais escuro ao passar o rato */
+}
+
+.card-sistema-rank {
+    position: absolute;
+    background-color: #2b2d31;
+    width: 220px;
+    height: 255px;
+    padding: 24px;
+    top: 194%;
+    left: 45%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #dbdee1;
+    z-index: 1;
+}
+
+.card-header-sistema-rank {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.icon-box-sistema-rank {
+    background-color: #1100fc;
+    /* Cor de fundo do ícone (ajuste conforme a imagem) */
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-box-sistema-rank img {
+    width: 30px;
+    height: 30px;
+}
+
+.badge-gratuito-sistema-rank {
+    background-color: #10334b;
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid rgba(241, 196, 15, 0.2);
+}
+
+.card-title-sistema-rank {
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0 0 12px 0;
+}
+
+.card-description-sistema-rank {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #b5bac1;
+    margin-bottom: 24px;
+}
+
+.status-button-sistema-rank {
+    display: relative;
+    top: 20%;
+    left: 60%;
+    background-color: #252525;
+    color: #4e92f3;
+    /* Azul do texto "Ativo" */
+    padding: 13px 6px;
+    padding-left: 40px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s;
+    z-index: 1;
+    width: 50px;
+}
+
+.check-icon-sistema-rank {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #4e92f3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 30px;
+    font-size: 10px;
+    top: 83.5%;
+    left: 3%;
+}
+
+.titulo-tags-automaticas {
+    position: absolute;
+    color: #949ba4;
+    /* Cor mais discreta para títulos de categoria */
+    padding: 15px 12px 5px 12px;
+    font-family: sans-serif;
+    font-size: 25px;
+    /* Texto menor para parecer cabeçalho */
+    font-weight: bold;
+    text-transform: uppercase;
+    /* Letras maiúsculas */
+    letter-spacing: 1px;
+    top: 236%;
+    left: 24.3%;
+    z-index: 2;
+}
+
+.botao-funcao-tags-reacao button {
+    position: absolute;
+    background-color: #252525;
+    /* Azul clássico do Discord */
+    color: #4e92f3;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    z-index: 3;
+    top: 281.6%;
     left: 35.3%;
     width: 95px;
     height: 43px;
 }
 
 .botao-funcao-tags-reacao button:hover {
-    background-color: #404249; /* Azul um pouco mais escuro ao passar o rato */
+    background-color: #404249;
+    /* Azul um pouco mais escuro ao passar o rato */
 }
 
 .card-tags-reacao {
@@ -1104,7 +1774,7 @@ body {
     width: 220px;
     height: 255px;
     padding: 24px;
-    top: 194%;
+    top: 248%;
     left: 25%;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -1193,7 +1863,8 @@ body {
 
 .botao-funcao-tags-mencionamento button {
     position: absolute;
-    background-color: #252525; /* Azul clássico do Discord */
+    background-color: #252525;
+    /* Azul clássico do Discord */
     color: #4e92f3;
     padding: 10px 20px;
     border: none;
@@ -1203,14 +1874,15 @@ body {
     cursor: pointer;
     transition: background-color 0.2s;
     z-index: 2;
-    top: 227.6%;
+    top: 281.6%;
     left: 55.2%;
     width: 95px;
     height: 43px;
 }
 
 .botao-funcao-tags-mencionamento button:hover {
-    background-color: #404249; /* Azul um pouco mais escuro ao passar o rato */
+    background-color: #404249;
+    /* Azul um pouco mais escuro ao passar o rato */
 }
 
 .card-tags-mencionamento {
@@ -1219,7 +1891,7 @@ body {
     width: 220px;
     height: 255px;
     padding: 24px;
-    top: 194%;
+    top: 248%;
     left: 45%;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -1308,7 +1980,8 @@ body {
 
 .botao-funcao-tags-entrar button {
     position: absolute;
-    background-color: #252525; /* Azul clássico do Discord */
+    background-color: #252525;
+    /* Azul clássico do Discord */
     color: #4e92f3;
     padding: 10px 20px;
     border: none;
@@ -1318,14 +1991,15 @@ body {
     cursor: pointer;
     transition: background-color 0.2s;
     z-index: 2;
-    top: 227.6%;
+    top: 281.6%;
     left: 75.2%;
     width: 95px;
     height: 43px;
 }
 
 .botao-funcao-tags-entrar button:hover {
-    background-color: #404249; /* Azul um pouco mais escuro ao passar o rato */
+    background-color: #404249;
+    /* Azul um pouco mais escuro ao passar o rato */
 }
 
 .card-tags-entrar {
@@ -1334,7 +2008,7 @@ body {
     width: 220px;
     height: 255px;
     padding: 24px;
-    top: 194%;
+    top: 248%;
     left: 65%;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);

@@ -56,3 +56,18 @@ document.addEventListener("DOMContentLoaded", function() {
     impedirFechoNoPainel(painelAtualizacoes);
     impedirFechoNoPainel(painelNotificacoes);
 });
+
+function mudarIdioma(sigla, flagCode) {
+    // 1. Encontrar o texto e a imagem do botão principal
+    const textoAtual = document.getElementById('sigla-atual');
+    const imagemAtual = document.getElementById('img-atual');
+
+    // 2. Mudar o texto para a sigla escolhida (ex: EN, FR)
+    textoAtual.innerText = sigla;
+
+    // 3. Mudar o link da imagem para a bandeira correspondente
+    imagemAtual.src = `https://flagcdn.com/w40/${flagCode}.png`;
+
+    // Opcional: Fechar o menu após selecionar (se estiveres a usar clique em vez de hover)
+    console.log("Idioma alterado para: " + sigla);
+}

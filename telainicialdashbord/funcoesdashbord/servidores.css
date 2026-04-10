@@ -1,0 +1,457 @@
+.retangulo-info-funcoes-servidores {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 80px;
+    background-color: #272727;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #707070;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    font-family: sans-serif;
+}
+
+@media (max-width: 600px) {
+    .retangulo-info-funcoes-servidores {
+        height: 60px;
+        font-size: 14px;
+    }
+}
+
+.fundotelainicial-funcoes-servidores {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('imagensfuncoesservidores-info/fundofuncoesservidor.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.logotelainicial-funcoes-servidores {
+    position: fixed;
+    top: 0.7%;
+    left: 2%;
+    width: 3%;
+    height: 7%;
+    background-image: url('imagensfuncoesservidores-info/logofuncoesservidores.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 4;
+}
+
+.container-vertical-scroll-funcoes-servidores {
+    position: fixed;
+    top: 30px;
+    /* Ajusta conforme a tua dashboard */
+    left: 0px;
+    width: 300px;
+    height: 700px;
+    background-color: #2b2d31;
+    /* Cor cinza escuro do Discord */
+    border-radius: 8px;
+    border: 1px solid #404249;
+    overflow: hidden;
+    /* Garante que nada sai das bordas arredondadas */
+    z-index: 1;
+}
+
+.titulo-scroll-funcoes-servidores {
+    background-color: #232428;
+    color: white;
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 16px;
+    border-bottom: 1px solid #404249;
+}
+
+.conteudo-scroll-funcoes-servidores {
+    height: 600px;
+    /* ALTURA FIXA: O scroll só aparece se o conteúdo exceder isto */
+    overflow-y: auto;
+    /* Adiciona o scroll vertical automaticamente */
+    padding: 10px;
+}
+
+/* Estilização da Barra de Scroll (Para ficar bonita no Chrome/Edge) */
+.conteudo-scroll-funcoes-servidores::-webkit-scrollbar {
+    width: 8px;
+}
+
+.conteudo-scroll-funcoes-servidores::-webkit-scrollbar-track {
+    background: #2b2d31;
+}
+
+.conteudo-scroll-funcoes-servidores::-webkit-scrollbar-thumb {
+    background: #1e1f22;
+    border-radius: 10px;
+}
+
+.conteudo-scroll-funcoes-servidores::-webkit-scrollbar-thumb:hover {
+    background: #101112;
+    /* Cor azul quando passas o rato */
+}
+
+/* Estilo dos itens lá dentro */
+.item-lista-funcoes-servidores {
+    display: block;
+    /* Faz o link ocupar a largura toda do retângulo */
+    background: #313338;
+    color: #dbdee1;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    font-family: sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    /* Remove o sublinhado de link */
+    transition: all 0.2s ease;
+    /* Efeito suave ao passar o rato */
+    border: 1px solid transparent;
+}
+
+/* Efeito ao passar o rato (Hover) */
+.item-lista-funcoes-servidores:hover {
+    background: #404249;
+    /* Fica um pouco mais claro */
+    color: #ffffff;
+    /* A letra fica branca pura */
+    transform: translateX(5px);
+    /* Dá um pequeno salto para a direita */
+}
+
+/* Estilo das Categorias (Não são clicáveis) */
+.item-lista-categoria-funcoes-servidores {
+    color: #949ba4;
+    /* Cor mais discreta para títulos de categoria */
+    padding: 15px 12px 5px 12px;
+    font-family: sans-serif;
+    font-size: 12px;
+    /* Texto menor para parecer cabeçalho */
+    font-weight: bold;
+    text-transform: uppercase;
+    /* Letras maiúsculas */
+    letter-spacing: 1px;
+}
+
+.botao-custom-atualizacoes-funcoes-servidores {
+    position: fixed;
+    background-color: #313338;
+    /* Cor original */
+    color: white;
+    border: 1px solid #3e3e42;
+    padding: 10px 15px;
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: sans-serif;
+    z-index: 3;
+    top: 2.5%;
+    left: 75%;
+    font-size: 17px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    font-weight: bold;
+}
+
+/* ESTADO QUANDO PASSAS O RATO (HOVER) */
+.botao-custom-atualizacoes-funcoes-servidores:hover {
+    background-color: #404249;
+    /* Um cinza um pouco mais claro */
+}
+
+/* ESTADO QUANDO CLICAS (ACTIVE) - Opcional, para dar efeito de clique */
+.botao-custom-funcoes-servidores:active {
+    background-color: #3e3e42;
+    transform: translateY(1px);
+    /* O botão "baixa" 1 pixel ao clicar */
+}
+
+.botao-custom-atualizacoes-funcoes-servidores img {
+    width: 30px;
+    height: 27px;
+    object-fit: cover;
+}
+
+/* Retângulo de Atualizações */
+.retangulo-atualizacoes-funcoes-servidores {
+    display: none;
+    position: fixed; /* Mudar de absolute para fixed */
+    width: 300px;
+    background-color: #2b2d31;
+    border: 1px solid #3e3e42;
+    padding: 10px;
+    border-radius: 4px;
+    z-index: 10 !important;
+    left: 70%; /* Ajusta para alinhar com o teu botão */
+    top: 67.5px;  /* Ajusta para ficar logo abaixo do botão */
+}
+
+/* Estilo que simula um Embed do Discord */
+.embed-item-atualizacoes-funcoes-servidores {
+    background-color: #232428;
+    display: flex;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.embed-barra-lateral-atualizacoes-funcoes-servidores {
+    width: 4px;
+    /* A cor é definida via 'style' no HTML, mas podes por uma base aqui */
+}
+
+.embed-conteudo-atualizacoes-funcoes-servidores {
+    padding: 10px;
+    color: #dbdee1;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+
+/* Classe auxiliar para o JS */
+.mostrar-atualizacoes-funcoes-servidores {
+    display: block !important;
+}
+
+.botao-custom-notificacoes-funcoes-servidores {
+    position: fixed;
+    background-color: #313338;
+    /* Cor original */
+    color: white;
+    border: 1px solid #3e3e42;
+    padding: 10px 15px;
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: sans-serif;
+    z-index: 3;
+    top: 2.5%;
+    left: 60%;
+    font-size: 17px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    font-weight: bold;
+}
+
+/* ESTADO QUANDO PASSAS O RATO (HOVER) */
+.botao-custom-notificacoes-funcoes-servidores:hover {
+    background-color: #404249;
+    /* Um cinza um pouco mais claro */
+}
+
+/* ESTADO QUANDO CLICAS (ACTIVE) - Opcional, para dar efeito de clique */
+.botao-custom-notificacoes-funcoes-servidores:active {
+    background-color: #3e3e42;
+    transform: translateY(1px);
+    /* O botão "baixa" 1 pixel ao clicar */
+}
+
+.botao-custom-notificacoes-funcoes-servidores img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+/* Retângulo de Atualizações */
+.retangulo-notificacoes-funcoes-servidores {
+    display: none !important;
+    position: absolute;
+    width: 300px;
+    background-color: #2b2d31;
+    border: 1px solid #3e3e42;
+    padding: 10px;
+    border-radius: 4px;
+    z-index: 9999;
+    left: 55%;
+    top: 9%;
+}
+
+/* Estilo que simula um Embed do Discord */
+.embed-item-notificacoes-funcoes-servidores {
+    background-color: #232428;
+    display: flex;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.embed-barra-lateral-notificacoes-funcoes-servidores {
+    width: 4px;
+}
+
+.embed-conteudo-notificacoes-funcoes-servidores {
+    padding: 10px;
+    color: #dbdee1;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+
+/* Classe auxiliar para o JS */
+.mostrar-notificacoes-funcoes-servidores {
+    display: block !important;
+}
+
+.mostrar-painel-funcoes-servidores {
+    display: block !important;
+}
+
+.link-suporte-funcoes-servidores {
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+.btn-suporte-discord-funcoes-servidores {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #313338; /* Cor oficial do Discord */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    top: 2.6%;
+    left: 44.3%;
+    z-index: 4;
+    width: 190px;
+    height: 49.4px;
+    flex-direction: row-reverse;
+}
+
+.btn-suporte-discord-funcoes-servidores img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Efeito ao passar o rato */
+.btn-suporte-discord-funcoes-servidores:hover {
+    background-color: #404249;
+    transform: translateY(-2px);
+}
+
+/* Efeito ao clicar */
+.btn-suporte-discord-funcoes-servidores:active {
+    transform: translateY(0);
+}
+
+/* Container principal */
+.idioma-container-funcoes-servidores {
+    position: fixed; /* Mudado de fixed para relative */
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin-bottom: 20px; /* Espaço entre o botão e o título RECEÇÃO */
+    z-index: 10;
+    left: 36%;
+    top: 2.8%;
+}
+
+/* Botão que fica visível */
+.btn-idioma-atual-funcoes-servidores {
+    background: #2b2d31; /* Cor escura do fundo dos teus botões */
+    border: none;
+    color: #dbdee1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 5px; /* Bordas arredondadas leves */
+    transition: background 0.2s;
+        width: 90px;
+    height: 49px;
+}
+
+.btn-idioma-atual-funcoes-servidores:hover {
+    background: #35373c;
+}
+
+.btn-idioma-atual-funcoes-servidores img {
+    width: 20px;
+    border-radius: 2px;
+}
+
+/* Seta pequena ao lado do texto */
+.seta-baixo-funcoes-servidores {
+    border: solid #949ba4;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+}
+
+/* Painel que aparece (Dropdown) */
+.painel-idiomas-funcoes-servidores {
+    display: none;
+    position: absolute;
+    top: 100%; /* Aparece logo abaixo do botão */
+    left: -50%;
+    background-color: #111214;
+    min-width: 180px;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+    z-index: 1000;
+}
+
+/* Mostrar o painel quando passar o rato */
+.idioma-container-funcoes-servidores:hover .painel-idiomas-funcoes-servidores {
+    display: block;
+}
+
+/* Itens da lista de idiomas */
+.item-idioma-funcoes-servidores {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #b5bac1;
+    padding: 10px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.item-idioma-funcoes-servidores img {
+    width: 20px;
+    height: auto;
+}
+
+.item-idioma-funcoes-servidores:hover {
+    background-color: #35373c; /* Cor de hover estilo Discord */
+    color: #ffffff;
+}
+
+/* Estilo para o idioma que está selecionado */
+.item-idioma-funcoes-servidores.active {
+    background-color: #3f4147;
+    color: #ffffff;
+}
+
+#img-atual-funcoes-servidores {
+    width: 20px;
+    height: auto;
+    border-radius: 2px;
+    object-fit: cover;
+}
